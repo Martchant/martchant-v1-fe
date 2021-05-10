@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 import Menu from "../assets/menu.svg";
 import Exit from "../assets/exit.svg";
@@ -9,9 +10,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="container">
-        <a className="logo" href="#">
+        <NavLink className="logo" to="/">
           Mart<span>Chant</span>
-        </a>
+        </NavLink>
 
         <img
           id="mobile-cta"
@@ -30,25 +31,25 @@ function Navbar() {
 
           <ul className="primary-nav">
             <li className="current">
-              <a href="#">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="#">Features</a>
+              <NavLink to="/features">Features</NavLink>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <NavLink to="/pricing">Pricing</NavLink>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <NavLink to="/faq">FAQs</NavLink>
             </li>
           </ul>
 
           <ul className="secondary-nav">
             <li>
-              <a href="#">Login</a>
+              <Link to="/login">Login</Link>
             </li>
             <li className="go-premium-cta">
-              <a href="#">Get started</a>
+              <Link to="/register">Get started</Link>
             </li>
           </ul>
         </nav>
