@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Menu from "../assets/menu.svg";
 import Exit from "../assets/exit.svg";
@@ -10,9 +10,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="container">
-        <NavLink className="logo" to="/">
+        <Link className="logo" to="/">
           Mart<span>Chant</span>
-        </NavLink>
+        </Link>
 
         <img
           id="mobile-cta"
@@ -31,16 +31,16 @@ function Navbar() {
 
           <ul className="primary-nav">
             <li className="current">
-              <NavLink to="/">Home</NavLink>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <NavLink to="/features">Features</NavLink>
+              <Link to="/features">Features</Link>
             </li>
             <li>
-              <NavLink to="/pricing">Pricing</NavLink>
+              <Link to="/pricing">Pricing</Link>
             </li>
             <li>
-              <NavLink to="/faq">FAQs</NavLink>
+              <Link to="/faq">FAQs</Link>
             </li>
           </ul>
 
